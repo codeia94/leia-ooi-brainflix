@@ -9,6 +9,10 @@ header {
 	@include tablet {
 		@include t-sidepadding
 	}
+
+	@include desktop {
+		@include d-sidepadding
+	}
 }
 
 .nav {
@@ -59,6 +63,9 @@ header {
 				margin-right: 24px;
 				padding-left: 40px;
 			}
+			@include desktop {
+				width: 18vw;
+			}
 		}
 		&__icon {
 			position: absolute;
@@ -91,6 +98,9 @@ header {
 			width: 20vw;
 			order: 1;
 		}
+		@include desktop {
+			width: 13vw;
+		}
 	}
 	&-button {
 		display: block;
@@ -102,6 +112,9 @@ header {
 			width: 20vw;
 			margin: 0;
 			order: 2;
+		}
+		@include desktop {
+			width: 13vw;
 		}
 
 		&__icon {

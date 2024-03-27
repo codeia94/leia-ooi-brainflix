@@ -60,9 +60,9 @@
 	padding: 0 2.25rem;
 }
 
-// @mixin d-sidepadding {
-	
-// }
+@mixin d-sidepadding {
+	padding: 0 6rem;
+}
 
 @mixin page-header {
 	font-size: 33px;
