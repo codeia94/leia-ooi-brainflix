@@ -12,17 +12,17 @@ function Header () {
 			<nav className="nav">
 				<img className="nav-logo" src={brainflix} alt="Brainflix icon" />
 				<div className="nav-bar">
-					<input className="nav-bar__search" type="text" placeholder="Search" />
-					<img className="nav-bar__icon" src={search} alt="search icon" />
+					<div className="nav-bar__container">
+						<input className="nav-bar__search" type="text" placeholder="Search" />
+						<img className="nav-bar__icon" src={search} alt="search icon" />
+					</div>	
 					<img className="nav-bar__avatar" src={avatar} alt="avatar"/>
-				</div>
 
-				<div className="nav-upload">
-					<button className="nav-button">UPLOAD</button>
-					<img className="nav-button__icon" src={upload} alt="upload"/>
+					<div className="nav-upload">
+						<button className="nav-button">UPLOAD</button>
+						<img className="nav-button__icon" src={upload} alt="upload"/>
+					</div>
 				</div>
-
-			
 			</nav>
 		</header>
 	);

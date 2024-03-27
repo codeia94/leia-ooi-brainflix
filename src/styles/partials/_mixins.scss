@@ -1,5 +1,19 @@
 @use "variables" as *;
 @use "typography" as *;
+@use "fontcolors" as *;
+
+
+@mixin tablet {
+	@media screen and (min-width: $tablet-breakpoint) {
+		@content;
+	}
+}
+
+@mixin desktop {
+	@media screen and (min-width: $desktop-breakpoint) {
+		@content;
+	}
+}
 
 
 //------------------------MOBILE STYLES---------------------//
@@ -42,6 +56,14 @@
 
 //------------------------DESKTOP & TABLET----------------------------//
 
+@mixin t-sidepadding {
+	padding: 0 2.25rem;
+}
+
+// @mixin d-sidepadding {
+	
+// }
+
 @mixin page-header {
 	font-size: 33px;
 	line-height: 44px;
@@ -76,8 +98,8 @@
 //--------------------------------------------------//
 
 @mixin btn {
-	color: white;
-	background-color: rgb(0, 149, 255);
+	color: $white;
+	background-color: $blue;
 	border-radius: 4px;
 	border-width: 0;
 	height: 40px;
