@@ -1,0 +1,84 @@
+@use "variables" as *;
+@use "typography" as *;
+
+
+//------------------------MOBILE STYLES---------------------//
+@mixin m-page-header {
+	font-size: 24px;
+	line-height: 32px;
+	font-weight: 700;
+}
+
+/* same as desktop/tablet
+@mixin m-section-header {
+	font-size: 12px;
+	line-height: 20px;
+	font-weight: 700;
+}
+*/
+
+@mixin m-subheader {
+	font-size: 13px;
+	line-height: 18px;
+	font-weight: 700;
+}
+
+@mixin m-body-copy {
+	font-size: 13px;
+	line-height: 18px;
+	font-weight: 400;
+}
+
+@mixin m-labels-button {
+	font-size: 10px;
+	line-height: 20px;
+	font-weight: 700;
+}
+
+@mixin m-sidepadding {
+	padding: 0 1rem;
+}
+
+
+//------------------------DESKTOP & TABLET----------------------------//
+
+@mixin page-header {
+	font-size: 33px;
+	line-height: 44px;
+	font-weight: 700;
+}
+
+@mixin section-header {
+	font-size: 12px;
+	line-height: 20px;
+	font-weight: 700;
+}
+
+@mixin subheader {
+	font-size: 14px;
+	line-height: 22px;
+	font-weight: 700;
+}
+
+@mixin body-copy {
+	font-size: 14px;
+	line-height: 22px;
+	font-weight: 400;
+}
+
+@mixin labels-button {
+	font-size: 12px;
+	line-height: 20px;
+	font-weight: 700;
+}
+
+
+//--------------------------------------------------//
+
+@mixin btn {
+	color: white;
+	background-color: rgb(0, 149, 255);
+	border-radius: 4px;
+	border-width: 0;
+	height: 40px;
+}

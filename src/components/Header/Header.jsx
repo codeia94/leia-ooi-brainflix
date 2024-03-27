@@ -14,12 +14,12 @@ function Header () {
 				<div className="nav-bar">
 					<input className="nav-bar__search" type="text" placeholder="Search" />
 					<img className="nav-bar__icon" src={search} alt="search icon" />
-					<img className="nav-avatar" src={avatar} alt="avatar"/>
+					<img className="nav-bar__avatar" src={avatar} alt="avatar"/>
 				</div>
 
 				<div className="nav-upload">
 					<button className="nav-button">UPLOAD</button>
-						<img src={upload} alt="upload"/>
+					<img className="nav-button__icon" src={upload} alt="upload"/>
 				</div>
 
 			
