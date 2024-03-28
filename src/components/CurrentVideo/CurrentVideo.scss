@@ -1,0 +1,25 @@
+@use "../../styles/partials/global" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/fontcolors" as *;
+
+header {
+	@include m-padding;
+
+	@include tablet {
+		@include t-padding
+	}
+
+	@include desktop {
+		@include d-padding
+	}
+}
+
+.video {
+	width: 100%;
+	box-sizing: border-box;
+	&-current {
+		box-sizing: border-box;
+		width: 100%;
+	}
+}
