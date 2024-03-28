@@ -15,7 +15,6 @@
 	}
 }
 
-
 //------------------------MOBILE STYLES---------------------//
 @mixin m-page-header {
 	font-size: 24px;
@@ -49,19 +48,19 @@
 	font-weight: 700;
 }
 
-@mixin m-sidepadding {
-	padding: 0 1rem;
+@mixin m-padding {
+	padding: 1rem;
 }
 
 
 //------------------------DESKTOP & TABLET----------------------------//
 
-@mixin t-sidepadding {
-	padding: 0 2.25rem;
+@mixin t-padding {
+	padding: 1.5rem 2.25rem;
 }
 
-@mixin d-sidepadding {
-	padding: 0 6rem;
+@mixin d-padding {
+	padding: 1.5rem 6rem ;
 }
 
 @mixin page-header {
@@ -103,4 +102,9 @@
 	border-radius: 4px;
 	border-width: 0;
 	height: 40px;
+}
+
+@mixin td-avatar {
+	height: 40px;
+	width: 40px;
 }

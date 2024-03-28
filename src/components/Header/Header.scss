@@ -4,14 +4,14 @@
 @use "../../styles/partials/fontcolors" as *;
 
 header {
-	@include m-sidepadding;
+	@include m-padding;
 
 	@include tablet {
-		@include t-sidepadding
+		@include t-padding
 	}
 
 	@include desktop {
-		@include d-sidepadding
+		@include d-padding
 	}
 }
 
@@ -19,23 +19,24 @@ header {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	padding-top: 1rem;
 	
 	@include tablet {
 		flex-direction: row;;
 	}
 
 	&-logo {
-		max-height: 25px;
-		max-width: 120px;
+		height: 25px;
+		width: 120px;
+		margin-bottom: 1rem;
+		@include tablet {
+			margin-bottom: 0;
+		}
 	}
 	&-bar {
-		// height: 40px;
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: space-between;
 		width: 100%;
-		padding: 1rem 0;
 		align-items: center;
 
 		@include tablet {
@@ -49,7 +50,6 @@ header {
 
 		&__search {
 			height: 40px;
-			// position: relative;
 			padding-left: 35px;
 			width: 73vw;
 			background-color: $alabaster;
@@ -57,7 +57,6 @@ header {
 			border-color: $silver;
 			border-width: 1px;
 			@include tablet {
-				// position: relative;
 				width: 30vw;
 				order: 1;
 				margin-right: 24px;
@@ -80,14 +79,14 @@ header {
 		}
 		&__avatar {
 			border-radius: 50%;
-			max-width: 36px;
+			width: 36px;
 			height: 36px;
 			margin-left: 1rem;
 			@include tablet {
 				order: 3;
 				margin-left: 24px;
-			}
-			
+				@include td-avatar;
+			}	
 		}
 	}
 	
@@ -106,7 +105,6 @@ header {
 		display: block;
 		margin-top: 1rem;
 		width: 100%;
-		// position: relative;
 		@include btn;
 		@include tablet {
 			width: 20vw;
