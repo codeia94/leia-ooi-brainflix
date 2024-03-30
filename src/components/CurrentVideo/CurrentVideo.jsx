@@ -1,6 +1,5 @@
 import "./CurrentVideo.scss";
 import React from "react";
-
 import ViewCount from "../../assets/icons/views.svg";
 import LikeCount from "../../assets/icons/likes.svg";
 
@@ -11,7 +10,7 @@ function CurrentVideo ({videoData}) {
 	return (
 		<>
 			<div className="video">
-				<video className="video-current" poster={videoData.image} constrols></video>
+				<video className="video-current" poster={videoData.image} controls></video>
 			</div>
 			<div className="info">
 				<div className="info-title">
