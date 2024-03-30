@@ -4,6 +4,7 @@
 @use "../../styles/partials/fontcolors" as *;
 
 header {
+	margin: 1rem 0;
 	@include m-padding;
 
 	@include tablet {
@@ -22,4 +23,67 @@ header {
 		box-sizing: border-box;
 		width: 100%;
 	}
+}
+
+.info {
+	@include m-padding;
+
+	@include tablet {
+		@include t-padding
+	}
+
+	@include desktop {
+		@include d-padding
+	}
+
+	&-title {
+		// padding: 1rem 0;
+		h1 {
+			padding: 24px 0 16px;
+			margin: 0;
+		}
+		&-text {
+			margin: 0;
+			
+			@include m-page-header;
+			@include tablet {
+				@include page-header;
+			}
+		}
+	}
+	&-item {
+		display: flex;
+		
+		@include tablet {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			&__list {
+				display: flex;
+				flex-direction: row;
+				gap: 1rem;
+				flex-wrap: wrap;
+
+				p {
+					margin: 0;
+				}
+			}
+		}
+	}
+	&-description {
+		padding: 1rem 0;
+	}
+}
+
+
+@include tablet {
+	.td-hr {
+		display: none;
+	}
+} 
+
+.info-item__timestamp,
+.info-item__views,
+.info-item__likes {
+    color: silver;
 }

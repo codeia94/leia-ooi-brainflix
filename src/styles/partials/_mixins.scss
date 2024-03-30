@@ -49,14 +49,14 @@
 }
 
 @mixin m-padding {
-	padding: 1rem;
+	padding: 0 1rem;
 }
 
 
 //------------------------DESKTOP & TABLET----------------------------//
 
 @mixin t-padding {
-	padding: 1.5rem 2.25rem;
+	padding: 0 2.25rem;
 }
 
 @mixin d-padding {
@@ -108,3 +108,4 @@
 	height: 40px;
 	width: 40px;
 }
+
