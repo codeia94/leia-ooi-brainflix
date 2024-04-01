@@ -8,7 +8,6 @@ header {
 
 	@include tablet {
 		@include t-padding;
-		// @include td-contentpadding;
 	}
 
 	@include desktop {

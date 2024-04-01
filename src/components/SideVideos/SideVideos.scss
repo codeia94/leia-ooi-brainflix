@@ -1,0 +1,63 @@
+@use "../../styles/partials/global" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/fontcolors" as *;
+
+aside {
+	@include m-padding;
+	@include tablet {
+		@include t-padding;
+	}
+	@include desktop {
+		@include d-padding;
+	}
+}
+
+
+.side-videos {
+	&__container {
+		display: inline-block;
+		flex-direction: column;
+		box-sizing: border-box;
+	}
+	&__list {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		margin-bottom: 8px;
+	}
+}
+
+.video {
+	&-container {
+		// width: 100;
+		box-sizing: border-box;
+		width: 40%;
+		margin-right: 1rem;
+		min-width: 10em;
+		@include tablet {
+			max-width: 15em;
+		}
+		&__video {
+			width:100%;
+			border-radius: 10px;
+		}
+	}
+	&-details {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		row-gap: 8px;
+
+		p {
+			margin: 0;
+		}
+
+		&__title {
+			// padding-bottom: 10px;
+			
+		}
+	}
+}
+
