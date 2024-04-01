@@ -6,7 +6,9 @@ import LikeCount from "../../assets/icons/likes.svg";
 
 
 function CurrentVideo ({videoData}) {
-	console.log(videoData);
+	// console.log(videoData);
+
+
 	return (
 		<>
 			<div className="video">
@@ -29,11 +31,12 @@ function CurrentVideo ({videoData}) {
 			</div>
 			<hr></hr>
 			<div className="info-description">{videoData.description}</div>
-			<div className="info-comments">3 Comments</div>
+			<div className="info-comments">{videoData.comments.length} comments</div>
 		</div>
 		</>
 	);
 }
+
 
 export default CurrentVideo;
 

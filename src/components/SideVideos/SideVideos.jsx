@@ -1,13 +1,23 @@
 import "./SideVideos.scss";
 
-function SideVideos({ videos }) {
+
+function SideVideos({ videos, onChangeVideo, currentVideo }) {
+	const onVideoClick = (videoId) => {
+		// console.log("Video clicked", videoId);
+		onChangeVideo(videoId);
+	};
+
+	const filteredVideos = videos.filter((video) => {
+		return video.id !== currentVideo.id;
+	});
+
 	return (
 		<aside className="side-videos">
 			<h2 className="side-videos__title">NEXT VIDEO</h2>
 			<div className="side-videos__container">
-				{videos.map((video) => {
+				{filteredVideos.map((video) => {
 					return (
-						<div key={video.id} className="side-videos__list">
+						<div key={video.id} className="side-videos__list" onClick={() => {onVideoClick(video.id);}}>
 								<div className="video-container">
 									<video className="video-container__video" poster={video.image}></video>
 								</div>
@@ -24,12 +34,3 @@ function SideVideos({ videos }) {
 }
 
 export default SideVideos;
-
-
-{/* <aside className="side-videos">
-			<h3 className="side-videos__title">NEXT VIDEO</h3>
-			<div className="side-videos__container">
-				<video className="side-videos__video" src=""> </video>
-			</div>
-			
-		</aside> */}
