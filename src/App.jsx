@@ -2,6 +2,7 @@ import "./App.scss";
 import videos from "./data/video-details.json";
 import Header from "./components/Header/Header";
 import CurrentVideo from "./components/CurrentVideo/CurrentVideo"; 
+import Form from "./components/Form/Form";
 import SideVideos from "./components/SideVideos/SideVideos";
 import { useState } from "react";
 
@@ -23,6 +24,7 @@ function App() {
    <>
 	 	<Header />
 		<CurrentVideo videoData={currentVideo} />
+		<Form />
 		<SideVideos 
 			videos={videos} 
 			onChangeVideo={onChangeVideo}
