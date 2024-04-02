@@ -6,14 +6,9 @@ import LikeCount from "../../assets/icons/likes.svg";
 
 
 function CurrentVideo ({videoData}) {
-	// console.log(videoData);
-
 
 	return (
 		<banner>
-			{/* <div className="video">
-				<video className="video-current" poster={videoData.image} controls></video>
-			</div> */}
 			<div className="info">
 				<div className="info-title">
 					<h1 className="info-title__text">{videoData.title}</h1>

@@ -22,14 +22,6 @@
 	font-weight: 700;
 }
 
-/* same as desktop/tablet
-@mixin m-section-header {
-	font-size: 12px;
-	line-height: 20px;
-	font-weight: 700;
-}
-*/
-
 @mixin m-subheader {
 	font-size: 13px;
 	line-height: 18px;
@@ -51,7 +43,6 @@
 @mixin m-padding {
 	padding: 0 1rem;
 }
-
 
 //------------------------DESKTOP & TABLET----------------------------//
 
