@@ -25,15 +25,21 @@ function App() {
    <>
 	 	<Header />
 		<CurrentVideo videoData={currentVideo} />
-		<Form />
-		<Comments 
-			commentsData={currentVideo}	
-		/>
-		<SideVideos 
-			videos={videos} 
-			onChangeVideo={onChangeVideo}
-			currentVideo={currentVideo}
-		/>
+		<div className="main-container">
+			<div className="main-container__flex">
+				<Form />
+				<Comments 
+					commentsData={currentVideo}	
+				/>
+			</div>
+			<div className="main-container__flex">
+				<SideVideos 
+					videos={videos} 
+					onChangeVideo={onChangeVideo}
+					currentVideo={currentVideo}
+				/>
+			</div>
+		</div>
 	 </>
   );
 }

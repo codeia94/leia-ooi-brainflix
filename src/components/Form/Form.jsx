@@ -9,7 +9,7 @@ function Form() {
 			<img src={avatar} className="form-avatar" alt="avatar"/>
 			<div className="form-container">
 				<form className="form-container__input">
-					<label>JOIN THE CONVERSATION</label>
+					<div className="form-container__input-label">JOIN THE CONVERSATION</div>
 					<textarea
 						className="form-container__input-text"
 						typeof="text"

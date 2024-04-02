@@ -65,7 +65,23 @@ header {
 	}
 	&-item {
 		display: flex;
-		
+		@include tablet {
+			margin-bottom: 8px;
+		}
+		&__list {
+			flex: 1;
+			@include tablet {
+				flex: none;
+			}
+		}
+		&__channel {
+			font-weight: 600;
+		}
+		&__views, &__likes {
+			&-image {
+				margin-right: 8px;
+			}
+		}
 		@include tablet {
 			display: flex;
 			flex-direction: row;
@@ -75,7 +91,7 @@ header {
 				flex-direction: row;
 				gap: 1rem;
 				flex-wrap: wrap;
-
+				
 				p {
 					margin: 0;
 				}
@@ -88,11 +104,8 @@ header {
 			padding: 24px 0;
 		}
 	}
-
-	//TODO why is this not working???????
-	&-comment {
-		font-family: avenir;
-		font-weight: 800;
+	&-comments {
+		font-weight: 600;
 	}
 }
 
@@ -103,8 +116,8 @@ header {
 	}
 } 
 
-.info-item__timestamp,
-.info-item__views,
-.info-item__likes {
-    color: silver;
+.info-item {
+	&__timestamp, &__views, &__likes {
+		color: $silver;
+	}
 }

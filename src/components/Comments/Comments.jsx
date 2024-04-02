@@ -12,7 +12,7 @@ function Comments ({commentsData}) {
 					<img className="comments-img" alt="img" />
 					<div className="comments-container">
 						<div className="comments-container__details">
-							<p className="comments-container__detailes-name">{comment.name}</p>
+							<p className="comments-container__details-name">{comment.name}</p>
 							<p className="comments-container__details-date">{new Date(comment.timestamp).toLocaleDateString() }</p>
 						</div>
 						<div className="comments-container__comment">{comment.comment}</div>
