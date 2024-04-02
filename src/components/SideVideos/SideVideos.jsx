@@ -3,7 +3,6 @@ import "./SideVideos.scss";
 
 function SideVideos({ videos, onChangeVideo, currentVideo }) {
 	const onVideoClick = (videoId) => {
-		// console.log("Video clicked", videoId);
 		onChangeVideo(videoId);
 	};
 

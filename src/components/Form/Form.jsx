@@ -1,4 +1,5 @@
 import "./Form.scss";
+import React from "react";
 
 import avatar from "../../assets/images/Mohan-muruge.jpg";
 

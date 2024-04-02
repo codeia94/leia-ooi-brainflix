@@ -1,3 +1,4 @@
+@use "../../styles/partials/fontcolors" as *;
 
 
 * {
@@ -12,4 +13,5 @@
 
 hr {
 	margin: 0;
+	border: 1px solid $mercury;
 }
