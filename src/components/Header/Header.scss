@@ -4,6 +4,7 @@
 @use "../../styles/partials/fontcolors" as *;
 
 header {
+	margin-top: 1rem;
 	@include m-padding;
 
 	@include tablet {
@@ -110,6 +111,10 @@ header {
 			width: 20vw;
 			margin: 0;
 			order: 2;
+		}
+		@include m-labels-button;
+		@include tablet {
+			@include labels-button;
 		}
 		@include desktop {
 			width: 13vw;

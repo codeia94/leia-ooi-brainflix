@@ -1,6 +1,7 @@
 import "./App.scss";
 import videos from "./data/video-details.json";
 import Header from "./components/Header/Header";
+import CurrentVideoDetails from "./components/CurrentVideoDetails/CurrentVideoDetails";
 import CurrentVideo from "./components/CurrentVideo/CurrentVideo"; 
 import Form from "./components/Form/Form";
 import Comments from "./components/Comments/Comments";
@@ -24,15 +25,16 @@ function App() {
   return (
    <>
 	 	<Header />
-		<CurrentVideo videoData={currentVideo} />
+		<CurrentVideoDetails videoData={currentVideo} />
 		<div className="main-container">
-			<div className="main-container__flex">
+			<div className="main-container__two">
+				<CurrentVideo videoData={currentVideo} />
 				<Form />
 				<Comments 
 					commentsData={currentVideo}	
 				/>
 			</div>
-			<div className="main-container__flex">
+			<div className="main-container__one">
 				<SideVideos 
 					videos={videos} 
 					onChangeVideo={onChangeVideo}

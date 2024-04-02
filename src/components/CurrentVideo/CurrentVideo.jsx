@@ -10,13 +10,13 @@ function CurrentVideo ({videoData}) {
 
 
 	return (
-		<>
-			<div className="video">
+		<banner>
+			{/* <div className="video">
 				<video className="video-current" poster={videoData.image} controls></video>
-			</div>
+			</div> */}
 			<div className="info">
 				<div className="info-title">
-					<h1 className="title-text">{videoData.title}</h1>
+					<h1 className="info-title__text">{videoData.title}</h1>
 				</div>
 			<hr className="td-hr"></hr>
 			<div className="info-item">
@@ -33,7 +33,7 @@ function CurrentVideo ({videoData}) {
 			<div className="info-description">{videoData.description}</div>
 			<div className="info-comments">{videoData.comments.length} comments</div>
 		</div>
-		</>
+		</banner>
 	);
 }
 

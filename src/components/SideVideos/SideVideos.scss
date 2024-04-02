@@ -10,6 +10,7 @@ aside {
 	}
 	@include desktop {
 		@include d-padding;
+		padding-left: 1rem;
 	}
 }
 
@@ -24,7 +25,14 @@ aside {
 		display: flex;
 		flex-direction: row;
 		align-items: center;
-		margin-bottom: 8px;
+		margin-bottom: 1rem;
+	}
+	&__title {
+		@include m-subheader;
+		@include tablet {
+			@include subheader;
+		}
+		color: $silver;
 	}
 }
 
@@ -49,14 +57,23 @@ aside {
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
-		row-gap: 40px;
+		row-gap: 37px;
 
 		p {
 			margin: 0;
 		}
 
 		&__title {
-			font-weight: 600;
+			@include m-subheader;
+			@include tablet {
+				@include subheader
+			}
+		}
+		&__channel {
+			@include m-body-copy;
+			@include tablet {
+				@include body-copy;
+			}
 		}
 	}
 }

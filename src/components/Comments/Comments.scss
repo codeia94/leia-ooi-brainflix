@@ -25,14 +25,34 @@
 	}
 	&-container {
 		padding-left:  1rem;
+
+		&__comment {
+			@include m-body-copy;
+			@include tablet {
+				@include body-copy;
+			}
+			@include desktop {
+				padding-right: 16px;
+			}
+		}
 		&__details {
 			display: flex;
 			justify-content: space-between;
+			@include desktop {
+				padding-right: 16px;
+			}
 			&-name {
-				font-weight: 600;
+				@include m-subheader;
+				@include tablet {
+					@include subheader;
+				}
 			}
 			&-date {
 				color: $silver;
+				@include m-body-copy;
+				@include tablet {
+					@include body-copy;
+				}
 			}
 		}
 	}

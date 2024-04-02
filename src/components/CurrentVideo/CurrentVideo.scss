@@ -3,7 +3,7 @@
 @use "../../styles/partials/mixins" as *;
 @use "../../styles/partials/fontcolors" as *;
 
-header {
+banner {
 	margin: 1rem 0;
 	@include m-padding;
 
@@ -16,6 +16,8 @@ header {
 	}
 }
 
+
+/*
 .video {
 	width: 100%;
 	box-sizing: border-box;
@@ -33,6 +35,7 @@ header {
 		width: 100%;
 	}
 }
+*/
 
 .info {
 	@include m-padding;
@@ -42,31 +45,36 @@ header {
 	}
 
 	@include desktop {
-		@include d-padding
+		@include d-padding;
+		padding-top: 0;
+		padding-right: 0;
 	}
 
 	&-title {
 		// padding: 1rem 0;
 		h1 {
-			padding: 24px 0 16px;
+			padding: 16px 0 16px;
 			margin: 0;
 			@include tablet {
-				padding: 36px 0 24px;
+				padding: 24px 0 24px;
 			}
 		}
-		&-text {
+		&__text {
 			margin: 0;
-			
 			@include m-page-header;
 			@include tablet {
 				@include page-header;
 			}
+			
 		}
 	}
 	&-item {
 		display: flex;
 		@include tablet {
 			margin-bottom: 8px;
+		}
+		@include desktop {
+			padding-right: 16px;
 		}
 		&__list {
 			flex: 1;
@@ -75,7 +83,10 @@ header {
 			}
 		}
 		&__channel {
-			font-weight: 600;
+			@include m-subheader;
+			@include tablet {
+				@include subheader;
+			}
 		}
 		&__views, &__likes {
 			&-image {
@@ -100,12 +111,20 @@ header {
 	}
 	&-description {
 		padding: 1rem 0;
+		@include m-body-copy;
 		@include tablet {
 			padding: 24px 0;
+			@include body-copy;
+		}
+		@include desktop {
+			padding-right: 16px;
 		}
 	}
 	&-comments {
-		font-weight: 600;
+		@include m-subheader;
+		@include tablet {
+			@include subheader;
+		}
 	}
 }
 
@@ -119,5 +138,9 @@ header {
 .info-item {
 	&__timestamp, &__views, &__likes {
 		color: $silver;
+		@include m-body-copy;
+		@include tablet {
+			@include body-copy;
+		}
 	}
 }
