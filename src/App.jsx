@@ -1,12 +1,13 @@
 import "./App.scss";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { useState } from "react";
 import videos from "./data/video-details.json";
 import Header from "./components/Header/Header";
-import CurrentVideoDetails from "./components/CurrentVideoDetails/CurrentVideoDetails";
-import CurrentVideo from "./components/CurrentVideo/CurrentVideo"; 
+import CurrentVideo from "./components/CurrentVideo/CurrentVideo";
+import CurrentVideoDetails from "./components/CurrentVideoDetails/CurrentVideoDetails"; 
 import Form from "./components/Form/Form";
 import Comments from "./components/Comments/Comments";
 import SideVideos from "./components/SideVideos/SideVideos";
-import { useState } from "react";
 
 console.log(videos);
 
@@ -23,26 +24,31 @@ function App() {
 
 
   return (
-   <>
+   <BrowserRouter>
 	 	<Header />
-		<CurrentVideoDetails videoData={currentVideo} />
-		<div className="main-container">
-			<div className="main-container__two">
-				<CurrentVideo videoData={currentVideo} />
-				<Form />
-				<Comments 
-					commentsData={currentVideo}	
-				/>
-			</div>
-			<div className="main-container__one">
-				<SideVideos 
-					videos={videos} 
-					onChangeVideo={onChangeVideo}
-					currentVideo={currentVideo}
-				/>
-			</div>
-		</div>
-	 </>
+		<Routes>
+			<Route path="/" element={
+				<>
+					<CurrentVideo videoData={currentVideo} />
+					<div className="main-container">
+						<div className="main-container__two">
+
+							<CurrentVideoDetails videoData={currentVideo} />
+							<Form />
+							<Comments
+								commentsData={currentVideo} />
+						</div>
+						<div className="main-container__one">
+							<SideVideos
+								videos={videos}
+								onChangeVideo={onChangeVideo}
+								currentVideo={currentVideo} />
+						</div>
+					</div>
+				</>
+			} />
+		</Routes>
+	 </BrowserRouter>
   );
 }
 

@@ -3,9 +3,9 @@
 @use "../../styles/partials/mixins" as *;
 @use "../../styles/partials/fontcolors" as *;
 
-
-.video {
-	margin-top: 1rem;
+banner {
+	margin: 1rem 0;
+	@include m-padding;
 
 	@include tablet {
 		@include t-padding
@@ -14,23 +14,133 @@
 	@include desktop {
 		@include d-padding
 	}
+}
 
+
+/*
+.video {
 	width: 100%;
 	box-sizing: border-box;
 	background-color: $darkblack;
 	display: flex;
 	justify-content: center;
-
 	@include tablet {
 		padding: 0 36px;
 	}
-
 	@include desktop {
 		padding: 0 96px;
 	}
-	
 	&-current {
 		box-sizing: border-box;
 		width: 100%;
+	}
+}
+*/
+
+.info {
+	@include m-padding;
+
+	@include tablet {
+		@include t-padding
+	}
+
+	@include desktop {
+		@include d-padding;
+		padding-top: 0;
+		padding-right: 0;
+	}
+
+	&-title {
+		// padding: 1rem 0;
+		h1 {
+			padding: 16px 0 16px;
+			margin: 0;
+			@include tablet {
+				padding: 24px 0 24px;
+			}
+		}
+		&__text {
+			margin: 0;
+			@include m-page-header;
+			@include tablet {
+				@include page-header;
+			}
+			
+		}
+	}
+	&-item {
+		display: flex;
+		@include tablet {
+			margin-bottom: 8px;
+		}
+		@include desktop {
+			padding-right: 16px;
+		}
+		&__list {
+			flex: 1;
+			@include tablet {
+				flex: none;
+			}
+		}
+		&__channel {
+			@include m-subheader;
+			@include tablet {
+				@include subheader;
+			}
+		}
+		&__views, &__likes {
+			&-image {
+				margin-right: 8px;
+			}
+		}
+		@include tablet {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			&__list {
+				display: flex;
+				flex-direction: row;
+				gap: 1rem;
+				flex-wrap: wrap;
+				
+				p {
+					margin: 0;
+				}
+			}
+		}
+	}
+	&-description {
+		padding: 1rem 0;
+		@include m-body-copy;
+		@include tablet {
+			padding: 24px 0;
+			@include body-copy;
+		}
+		@include desktop {
+			padding-right: 16px;
+		}
+	}
+	&-comments {
+		@include m-subheader;
+		@include tablet {
+			@include subheader;
+		}
+	}
+}
+
+
+@include tablet {
+	.td-hr {
+		display: none;
+	}
+} 
+
+.info-item {
+	&__timestamp, &__views, &__likes {
+		color: $silver;
+		@include m-body-copy;
+		@include tablet {
+			@include body-copy;
+		}
 	}
 }
