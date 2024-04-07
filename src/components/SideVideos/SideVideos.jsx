@@ -1,13 +1,15 @@
+import { Link } from "react-router-dom";
 import "./SideVideos.scss";
 
 
-function SideVideos({ videos, onChangeVideo, currentVideo }) {
-	const onVideoClick = (videoId) => {
-		onChangeVideo(videoId);
-	};
+function SideVideos({ selectedVideoId, videos }) {
 
 	const filteredVideos = videos.filter((video) => {
-		return video.id !== currentVideo.id;
+		if (selectedVideoId) {
+			return video.id !== selectedVideoId;
+		} else {
+			return true;
+		}
 	});
 
 	return (
@@ -16,15 +18,17 @@ function SideVideos({ videos, onChangeVideo, currentVideo }) {
 			<div className="side-videos__container">
 				{filteredVideos.map((video) => {
 					return (
-						<div key={video.id} className="side-videos__list" onClick={() => {onVideoClick(video.id);}}>
-								<div className="video-container">
-									<video className="video-container__video" poster={video.image}></video>
-								</div>
-								<div className="video-details">
-									<p className="video-details__title">{video.title}</p>
-									<p className="video-details__channel">{video.channel}</p>
-								</div>
-						</div>
+						<Link to={`/videos/${video.id}`} key={video.id}>
+							<div key={video.id} className="side-videos__list" >
+									<div className="video-container">
+										<video className="video-container__video" poster={video.image}></video>
+									</div>
+									<div className="video-details">
+										<p className="video-details__title">{video.title}</p>
+										<p className="video-details__channel">{video.channel}</p>
+									</div>
+							</div>
+						</Link>
 					)
 				})}
 			</div>

@@ -7,7 +7,7 @@ function Comments ({commentsData}) {
 	return (
 		<section className="comments">
 			<hr></hr>
-			{commentsData.comments.map((comment) => (
+			{commentsData.map((comment) => (
 				<div key={comment.id} className="comments-list">
 					<img className="comments-img" alt="img" />
 					<div className="comments-container">
@@ -26,5 +26,3 @@ function Comments ({commentsData}) {
 
 
 export default Comments;
-
-

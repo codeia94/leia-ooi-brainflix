@@ -2,7 +2,6 @@ import brainflix from "../../assets/logo/BrainFlix-logo.svg";
 import search from "../../assets/icons/search.svg";
 import avatar from "../../assets/images/Mohan-muruge.jpg";
 import upload from "../../assets/icons/upload.svg";
-
 import "./Header.scss";
 
 
