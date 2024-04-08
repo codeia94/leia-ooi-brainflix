@@ -106,6 +106,10 @@ header {
 		display: block;
 		margin-top: 1rem;
 		width: 100%;
+		background-image: url("../../assets/icons/upload.svg");
+		background-repeat: no-repeat;
+		background-position-y: center;
+		background-position-x: 1rem;
 		@include btn;
 		@include tablet {
 			width: 20vw;
@@ -118,17 +122,6 @@ header {
 		}
 		@include desktop {
 			width: 13vw;
-		}
-
-		&__icon {
-			position: absolute;
-			left: 10px;
-			top: 23px;
-			@include tablet {
-				position: absolute;
-				left: 15px;
-				top: 8px;
-			}
 		}
 	}
 }

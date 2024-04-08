@@ -19,13 +19,18 @@ function CurrentVideoDetails () {
 	
 
 	useEffect(() => {
-		
-		const fetchVideoData = async () => {
-			const response = await axios.get(`${baseUrl}/videos/${videoId}?api_key=${apiKey}`);
-			setDetails(response.data);
-			console.log(response.data);
-		};
-		fetchVideoData();
+		if (videoId) {
+			try {
+				const fetchVideoData = async () => {
+					const response = await axios.get(`${baseUrl}/videos/${videoId}?api_key=${apiKey}`);
+					setDetails(response.data);
+					console.log(response.data);
+				}; 
+				fetchVideoData();
+			} catch (error) {
+				console.error("Error fetching video data", error);
+			} 
+		}
 	}, [videoId]);
 
 		if (!details) {

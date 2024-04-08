@@ -45,9 +45,8 @@ banner {
 	}
 
 	@include desktop {
-		@include d-padding;
-		padding-top: 0;
-		padding-right: 0;
+		// @include d-padding;
+		;
 	}
 
 	&-title {
