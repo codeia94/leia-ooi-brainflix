@@ -18,7 +18,7 @@ function SideVideos({ selectedVideoId, videos }) {
 			<div className="side-videos__container">
 				{filteredVideos.map((video) => {
 					return (
-						<Link to={`/videos/${video.id}`} key={video.id}>
+						<Link to={`/videos/${video.id}`} key={video.id} className="side-video__link">
 							<div key={video.id} className="side-videos__list" >
 									<div className="video-container">
 										<video className="video-container__video" poster={video.image}></video>

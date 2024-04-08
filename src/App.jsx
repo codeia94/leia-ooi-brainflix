@@ -23,7 +23,7 @@ function App() {
 			<Header />
 			<Routes>
 				<Route path="videos/:videoId" element={<HomePage />} />
-				<Route path="/" element={<HomePage />} />
+				<Route path="/" element={<HomePage firstId="84e96018-4022-434e-80bf-000ce4cd12b8"/>} />
 				{/* <Route path="/upload" element={<UploadPage />} /> */}
 				{/* <Route path="*" element={<h1>404 not found</h1>} /> */}
 			</Routes>

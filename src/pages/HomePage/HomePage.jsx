@@ -57,8 +57,15 @@ function HomePage () {
 	return (
 		<>
 			<CurrentVideo videoData={videoData} />
-			<CurrentVideoDetails videoData={videoData}/>
-			<SideVideos selectedVideoId={videoData.id}  videos={videos} />
+			<div className="main-container">
+				<div className="main-container__two">
+					<CurrentVideoDetails videoData={videoData}/>
+				</div>
+				<div className="main-container__one">
+					<SideVideos selectedVideoId={videoData.id}  videos={videos} />
+				</div>	
+			</div>
+		
 			{/* onChangeVideo={handleVideoSelect}  */}
 		</>
 	)
