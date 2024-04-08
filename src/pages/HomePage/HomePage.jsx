@@ -58,7 +58,7 @@ function HomePage () {
 		<>
 			<CurrentVideo videoData={videoData} />
 			<CurrentVideoDetails videoData={videoData}/>
-			<SideVideos videoData={videoData} videos={videos} />
+			<SideVideos selectedVideoId={videoData.id}  videos={videos} />
 			{/* onChangeVideo={handleVideoSelect}  */}
 		</>
 	)
