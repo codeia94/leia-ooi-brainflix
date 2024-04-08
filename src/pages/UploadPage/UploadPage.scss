@@ -1,0 +1,185 @@
+@use "../../styles/partials/global" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/fontcolors" as *;
+
+.upload {
+	box-sizing: border-box;
+	// width: 100%;
+	@include m-padding;
+	@include tablet {
+		@include t-padding;
+	}
+	@include desktop {
+		@include d-padding;
+	}
+
+	&-title {
+		margin: 1rem 0;
+		@include m-page-header;
+		@include tablet {
+			margin: 0;
+			padding: 36px 0 24px;
+			@include page-header;
+		}
+	}
+	&-container {
+		@include desktop {
+			display: flex;
+			flex-direction: row;
+		}
+	}
+	&-thumbnail {
+		display: flex;
+		flex-direction: column;
+		&__title {
+			margin: 0;
+			color: $silver;
+			margin-bottom: 4px;
+			@include m-subheader;
+			@include tablet {
+				@include subheader;
+			}
+		}
+		&__image {
+			margin-bottom: 1rem;
+			@include tablet {
+				width: 50%;
+			}
+			@include desktop {
+				width: 100%;
+			}
+		}
+	}
+}
+
+.flex {
+	@include desktop {
+		&-one {
+			flex: 2;
+		}
+		&-two {
+			flex: 3;
+		}
+	}
+}
+
+
+.form {
+	display: flex;
+	flex-direction: column;
+	@include desktop {
+		margin-left: 24px;
+	}
+	&-container {
+		margin-bottom: 1rem;
+		padding-left: 0;
+		@include tablet {
+			width: 100%;
+		}
+		@include desktop {
+			padding: 0;
+		}
+	}
+	//TODO - height not working
+	&-description {
+		height: auto;
+		&__text {
+			height: 6rem;
+		}
+	}
+	&-title, &-description {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		&__label {
+			color: $silver;
+			margin-bottom: 4px;
+			@include m-subheader;
+			@include tablet {
+				@include subheader;
+			}
+		}
+		&__text {
+			box-sizing: border-box;
+			max-width: 100%;
+			border-radius: 4px;
+			padding: 12px;
+			font-family: avenir;
+			border: 1px solid $silver;
+			background-color: $alabaster;
+			color: $darkblack;
+			@include tablet {
+				// height: auto;
+				width: 100%;
+				max-height: 40px;
+				padding: 16px;
+			}
+		}
+	}
+
+	&-button {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		@include tablet {
+			flex-direction: row;
+			justify-content: right;
+		}
+		&__submit {
+			@include btn;
+			background-image: url(../../assets/icons/upload.svg);
+			background-repeat: no-repeat;
+			background-position-y: center;
+			background-position-x: 1rem;
+			@include tablet {
+				order: 2;
+			}
+		}
+		&__cancel {
+			color: $blue;
+			background-color: $white;
+			border-radius: 4px;
+			border-width: 0;
+			height: 40px;
+			@include tablet {
+				order: 1;
+			}
+		}
+		&__submit, &__cancel{
+			margin-bottom: 1rem;
+			@include m-labels-button;
+			@include tablet {
+				width: 20%;
+			}
+		}
+	}
+}
+
+.hr {
+	&-top {
+		margin-top: 1rem;
+	}
+	&-btm {
+		display: none;
+		@include tablet {
+			display: block;
+			margin-bottom: 1rem;
+		}
+	}
+	&-form {
+		display: none;
+		@include tablet {
+			display: block;
+			margin: 24px 0;
+			width: 100%;
+		}
+	}
+	// &-desktopbtm {
+	// 	display: none;
+	// 	@include desktop {
+	// 		display: block;
+	// 		margin-bottom: 1rem;
+	// 	}
+	// }
+}
