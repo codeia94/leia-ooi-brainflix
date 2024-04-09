@@ -57,7 +57,7 @@ header {
 		}
 
 		&__search {
-			height: 40px;
+			height: 2.5rem;
 			padding-left: 35px;
 			width: 73vw;
 			background-color: $alabaster;
@@ -67,11 +67,11 @@ header {
 			background-image: url("../../assets//icons/search.svg");
 			background-repeat: no-repeat;
 			background-position-y: center;
-			background-position-x: 10px;
+			background-position-x: .625rem;
 			@include tablet {
 				width: 30vw;
 				order: 1;
-				margin-right: 24px;
+				margin-right: 1.5rem;
 				padding-left: 40px;
 			}
 			@include desktop {

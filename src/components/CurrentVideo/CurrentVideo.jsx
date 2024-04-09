@@ -15,12 +15,10 @@ function CurrentVideo () {
 	useEffect(() => {
 		
 		const fetchVideoData = async () => {
-			
-				const id = videoId || defaultVideoId;
-				const response = await axios.get(`${baseUrl}/videos/${id}?api_key=${apiKey}`);
-				setPoster(response.data.image);
-				console.log(response);
-			
+			const id = videoId || defaultVideoId;
+			const response = await axios.get(`${baseUrl}/videos/${id}?api_key=${apiKey}`);
+			setPoster(response.data.image);
+			console.log(response);	
 		};
 		fetchVideoData();
 	}, [videoId])
@@ -29,7 +27,6 @@ function CurrentVideo () {
 		<div className="video">
 			<video className="video-current" poster={poster} controls></video>
 		</div>
-		
 	)
 }
 

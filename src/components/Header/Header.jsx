@@ -15,7 +15,6 @@ function Header () {
 				<div className="nav-bar">
 					<div className="nav-bar__container">
 						<input className="nav-bar__search" type="text" placeholder="Search" />
-						{/* <img className="nav-bar__icon" src={search} alt="search icon" /> */}
 					</div>	
 					<img className="nav-bar__avatar" src={avatar} alt="avatar"/>
 					<Link to="/upload" className="nav-link">

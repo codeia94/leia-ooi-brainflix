@@ -8,8 +8,6 @@ import "./CurrentVideoDetails.scss";
 import ViewCount from "../../assets/icons/views.svg";
 import LikeCount from "../../assets/icons/likes.svg";
 
-
-
 function CurrentVideoDetails () {
 
 	const apiKey = "efc367f1-b23d-49ad-84f7-aae1e3479d5c";
@@ -18,26 +16,21 @@ function CurrentVideoDetails () {
 	const { videoId } = useParams();
 	const defaultVideoId = "84e96018-4022-434e-80bf-000ce4cd12b8";
 	
-
 	useEffect(() => {
-		
-			try {
-				const fetchVideoData = async () => {
-					const id = videoId || defaultVideoId;
-					const response = await axios.get(`${baseUrl}/videos/${id}?api_key=${apiKey}`);
-					setDetails(response.data);
-					console.log(response.data);
-				}; 
-				fetchVideoData();
-			} catch (error) {
-				console.error("Error fetching video data", error);
-			} 
-		
+
+		const fetchVideoData = async () => {
+			console.log(videoId)
+			const id = videoId || defaultVideoId;
+			const response = await axios.get(`${baseUrl}/videos/${id}?api_key=${apiKey}`);
+			setDetails(response.data);
+			console.log(response.data);
+		}; 
+		fetchVideoData();
 	}, [videoId]);
 
-		if (!details) {
-			return <div>Loading...</div>
-		}
+	if (!details) {
+		return <div>Loading...</div>
+	}
 
 	return (
 		<section>

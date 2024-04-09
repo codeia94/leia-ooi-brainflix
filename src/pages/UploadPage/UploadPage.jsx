@@ -18,7 +18,7 @@ function UploadPage () {
 			alert("Please fill out all fields before submitting");
 			return;
 		} else {
-			alert("Video uploaded successfully");
+			alert("Video uploaded successfully. Redirecting to home page...");
 			//navigate to HomePage
 			Navigate("/");
 		}
@@ -65,8 +65,6 @@ function UploadPage () {
 					<button form="uploadForm" className="uploadform-button__submit" type="submit">PUBLISH</button>
 					<button className="uploadform-button__cancel" type="submit">CANCEL</button>
 				</div>
-			
-			{/* <hr className="hr-desktopbtm"></hr> */}
 		</div>
 		</>
 	);

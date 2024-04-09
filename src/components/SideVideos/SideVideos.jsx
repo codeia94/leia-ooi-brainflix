@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import "./SideVideos.scss";
 
-
 function SideVideos({ selectedVideoId, videos }) {
 
 	const filteredVideos = videos.filter((video) => {

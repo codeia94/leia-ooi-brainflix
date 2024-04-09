@@ -26,11 +26,21 @@ aside {
 		flex-direction: row;
 		align-items: center;
 		margin-bottom: 1rem;
+		@include tablet {
+			margin-bottom: 1.5rem;
+		}
 	}
 	&__title {
 		@include m-subheader;
+		margin: 0;
+		padding: 1rem 0;
 		@include tablet {
 			@include subheader;
+			padding: 1.5rem 0;
+		}
+		@include desktop {
+			margin: 0;
+			padding: 2.25rem 0 1.5rem;
 		}
 		color: $silver;
 	}
@@ -60,7 +70,7 @@ aside {
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
-		row-gap: 37px;
+		row-gap: 2.3125rem;
 
 		p {
 			margin: 0;

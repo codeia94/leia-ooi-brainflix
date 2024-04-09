@@ -4,7 +4,7 @@
 @use "../../styles/partials/fontcolors" as *;
 
 banner {
-	margin: 1rem 0;
+	margin: 16px 0;
 	@include m-padding;
 
 	@include tablet {
@@ -17,23 +17,16 @@ banner {
 }
 
 .info {
-	@include m-padding;
-
 	@include tablet {
 		padding: 0;
 	}
 
-	// @include desktop {
-	// 	padding: 0;
-	// }
-
 	&-title {
-		// padding: 1rem 0;
 		h1 {
-			padding: 16px 0 16px;
+			padding: 1.5rem 0 1rem;
 			margin: 0;
 			@include tablet {
-				padding: 24px 0 24px;
+				padding: 2.25rem 0 1.5rem;
 			}
 		}
 		&__text {
@@ -42,16 +35,15 @@ banner {
 			@include tablet {
 				@include page-header;
 			}
-			
 		}
 	}
 	&-item {
 		display: flex;
 		@include tablet {
-			margin-bottom: 8px;
+			margin-bottom: .5rem;
 		}
 		@include desktop {
-			padding-right: 16px;
+			padding-right: 1rem;
 		}
 		&__list {
 			flex: 1;
@@ -67,7 +59,7 @@ banner {
 		}
 		&__views, &__likes {
 			&-image {
-				margin-right: 8px;
+				margin-right: .5rem;
 			}
 		}
 		@include tablet {
@@ -90,11 +82,11 @@ banner {
 		padding: 1rem 0;
 		@include m-body-copy;
 		@include tablet {
-			padding: 24px 0;
+			padding: 1.5rem 0;
 			@include body-copy;
 		}
 		@include desktop {
-			padding-right: 16px;
+			padding-right: 1rem;
 		}
 	}
 	&-comments {
