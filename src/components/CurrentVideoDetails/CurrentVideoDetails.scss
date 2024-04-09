@@ -16,38 +16,16 @@ banner {
 	}
 }
 
-
-/*
-.video {
-	width: 100%;
-	box-sizing: border-box;
-	background-color: $darkblack;
-	display: flex;
-	justify-content: center;
-	@include tablet {
-		padding: 0 36px;
-	}
-	@include desktop {
-		padding: 0 96px;
-	}
-	&-current {
-		box-sizing: border-box;
-		width: 100%;
-	}
-}
-*/
-
 .info {
 	@include m-padding;
 
 	@include tablet {
-		@include t-padding
+		padding: 0;
 	}
 
-	@include desktop {
-		// @include d-padding;
-		;
-	}
+	// @include desktop {
+	// 	padding: 0;
+	// }
 
 	&-title {
 		// padding: 1rem 0;

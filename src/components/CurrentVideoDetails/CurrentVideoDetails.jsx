@@ -16,13 +16,15 @@ function CurrentVideoDetails () {
 	const baseUrl = "https://unit-3-project-api-0a5620414506.herokuapp.com";
 	const [details, setDetails] = useState(null);
 	const { videoId } = useParams();
+	const defaultVideoId = "84e96018-4022-434e-80bf-000ce4cd12b8";
 	
 
 	useEffect(() => {
-		if (videoId) {
+		
 			try {
 				const fetchVideoData = async () => {
-					const response = await axios.get(`${baseUrl}/videos/${videoId}?api_key=${apiKey}`);
+					const id = videoId || defaultVideoId;
+					const response = await axios.get(`${baseUrl}/videos/${id}?api_key=${apiKey}`);
 					setDetails(response.data);
 					console.log(response.data);
 				}; 
@@ -30,7 +32,7 @@ function CurrentVideoDetails () {
 			} catch (error) {
 				console.error("Error fetching video data", error);
 			} 
-		}
+		
 	}, [videoId]);
 
 		if (!details) {

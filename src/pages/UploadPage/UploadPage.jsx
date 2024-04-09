@@ -35,23 +35,23 @@ function UploadPage () {
 					<h2 className="upload-thumbnail__title">VIDEO THUMBNAIL</h2>
 					<img src={videoThumbnail} alt="video thumbnail" className="upload-thumbnail__image" />
 				</div>
-				<form id="uploadForm" className="form flex-two" onSubmit={handleSubmit}>
-					<div className="form-container">
-						<div className="form-title">
-							<label className="form-title__label" >TITLE YOUR VIDEO</label>
+				<form id="uploadForm" className="uploadform flex-two" onSubmit={handleSubmit}>
+					<div className="uploadform-container">
+						<div className="uploadform-title">
+							<label className="uploadform-title__label" >TITLE YOUR VIDEO</label>
 							<input 
-								className="form-title__text" 
+								className="uploadform-title__text" 
 								typeof="text" 
 								id="title" 
 								name="title" 
 								placeholder="Add a title to your video" />
 						</div>
 					</div>
-					<div className="form-container">
-						<div className="form-description">
-							<label className="form-description__label" >ADD A VIDEO DESCRIPTION</label>
+					<div className="uploadform-container">
+						<div className="uploadform-description">
+							<label className="uploadform-description__label" >ADD A VIDEO DESCRIPTION</label>
 							<textarea 
-								className="form-description__text" 
+								className="uploadform-description__text" 
 								typeof="text" 
 								id="description" 
 								name="description" 
@@ -61,9 +61,9 @@ function UploadPage () {
 				</form>
 				</div>
 					<hr className="hr-form"></hr>
-				<div className="form-button">
-					<button form="uploadForm" className="form-button__submit" type="submit">PUBLISH</button>
-					<button className="form-button__cancel" type="submit">CANCEL</button>
+				<div className="uploadform-button">
+					<button form="uploadForm" className="uploadform-button__submit" type="submit">PUBLISH</button>
+					<button className="uploadform-button__cancel" type="submit">CANCEL</button>
 				</div>
 			
 			{/* <hr className="hr-desktopbtm"></hr> */}

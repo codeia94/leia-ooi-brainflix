@@ -3,9 +3,9 @@ import "./Comments.scss";
 
 function Comments ({commentsData}) {
 
-	console.log(commentsData);
+	// console.log(commentsData);
 	return (
-		<section className="comments">
+		<div className="comments">
 			<hr></hr>
 			{commentsData.map((comment) => (
 				<div key={comment.id} className="comments-list">
@@ -20,7 +20,7 @@ function Comments ({commentsData}) {
 					</div>
 				</div>
 			))}
-		</section>
+		</div>
 	)
 }
 

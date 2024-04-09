@@ -21,62 +21,29 @@ function HomePage () {
 	const [videos, setVideos] = useState([]);
 
 
-	//async function to fetch video list
-	// useEffect(() => {
-	// 	const fetchVideoList = async () => {
-	// 		const response = await axios.get(`${baseUrl}/videos?api_key=${apiKey}`);
-	// 		setVideos(response.data);
-	// 		console.log(response.data);
-	// 	};
-	// 	fetchVideoList();
-	// }, []);
-
-
-	// //async function to fetch video data 
-	// useEffect(() => {
-	// 	const fetchVideoData = async () => {
-	// 		// const id = videoId || "84e96018-4022-434e-80bf-000ce4cd12b8";
-	// 		// const response = await axios.get(`${baseUrl}/videos/${id}?api_key=${apiKey}`);
-	// 		// setVideoData(response.data);
-
-	// 		if (!videoId && videos.length > 0) {
-	// 			const firstVideoId = videos[0].id;
-	// 			const response = await axios.get(`${baseUrl}/videos/${firstVideoId}?api_key=${apiKey}`);
-	// 			setVideoData(response.data);
-	// 			console.log(response.data);
-	// 		} else if (videoId){
-	// 			//TODO set to default video
-	// 			const response = await axios.get(`${baseUrl}/videos/${videoId}?api_key=${apiKey}`);
-	// 			setVideoData(response.data);
-	// 			console.log(response.data);
-	// 		}
-	// 	};
-	// 	fetchVideoData();
-	// }, [videoId, videos]);
-
+	// async function to fetch video list
 	useEffect(() => {
-    const fetchVideos = async () => {
-        // Fetch video list
-        const listResponse = await axios.get(`${baseUrl}/videos?api_key=${apiKey}`);
-        setVideos(listResponse.data);
-        console.log(listResponse.data);
+		const fetchVideoList = async () => {
+			const response = await axios.get(`${baseUrl}/videos?api_key=${apiKey}`);
+			setVideos(response.data);
+			console.log(response.data);
+		};
+		fetchVideoList();
+	}, []);
 
-        // Determine videoId to fetch
-        const id = videoId || (listResponse.data[0] ? listResponse.data[0].id : null);
 
-        // If id is null, it means there are no videos, so we don't need to fetch video data
-        if (id === null) {
-            return;
+	//async function to fetch video data based on videoId
+	useEffect(() => {
+    const fetchVideoData = async () => {
+        const id = (!videoId && videos.length > 0) ? videos[0].id : videoId;
+        if (id) {
+					const response = await axios.get(`${baseUrl}/videos/${id}?api_key=${apiKey}`);
+					console.log(response.data);
+					setVideoData(response.data);
         }
-
-        // Fetch video data
-        const dataResponse = await axios.get(`${baseUrl}/videos/${id}?api_key=${apiKey}`);
-        setVideoData(dataResponse.data);
-        console.log(dataResponse.data);
     };
-
-    fetchVideos();
-}, [videoId]);
+    fetchVideoData();
+}, [videoId, videos]);
 
 	//loading state while fetching data
 	if (!videoData ) {
@@ -91,7 +58,7 @@ function HomePage () {
 					<CurrentVideoDetails videoData={videoData}/>
 				</div>
 				<div className="main-container__one">
-					<SideVideos selectedVideoId={videoData.id}  videos={videos} />
+					<SideVideos selectedVideoId={videoData.id} videos={videos} />
 				</div>	
 			</div>
 		

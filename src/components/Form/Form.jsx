@@ -5,7 +5,7 @@ import avatar from "../../assets/images/Mohan-muruge.jpg";
 
 function Form() {
 	return (
-		<section className="form">
+		<div className="form">
 			<img src={avatar} className="form-avatar" alt="avatar"/>
 			<div className="form-container">
 				<form className="form-container__input">
@@ -25,7 +25,7 @@ function Form() {
 					COMMENT
 				</button>
 			</div>
-		</section>
+		</div>
 	)
 }
 

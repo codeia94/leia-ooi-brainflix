@@ -6,11 +6,9 @@
 header {
 	margin-top: 1rem;
 	@include m-padding;
-
 	@include tablet {
 		@include t-padding;
 	}
-
 	@include desktop {
 		@include d-padding
 	}
@@ -25,6 +23,14 @@ header {
 		flex-direction: row;;
 	}
 
+	&-link {
+		text-decoration: none;
+		width: 100%;
+		@include desktop {
+			width: auto;
+		}
+	}
+
 	&-logo {
 		height: 25px;
 		width: 120px;
@@ -33,18 +39,19 @@ header {
 			margin-bottom: 0;
 		}
 	}
+
 	&-bar {
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: space-between;
 		width: 100%;
 		align-items: center;
-
 		@include tablet {
+			display: flex;
 			flex-wrap: nowrap;
 			justify-content: flex-end;
 		}
-		
+	
 		&__container {
 			position: relative
 		}
@@ -57,6 +64,10 @@ header {
 			border-radius: 4px;
 			border-color: $silver;
 			border-width: 1px;
+			background-image: url("../../assets//icons/search.svg");
+			background-repeat: no-repeat;
+			background-position-y: center;
+			background-position-x: 10px;
 			@include tablet {
 				width: 30vw;
 				order: 1;
@@ -67,6 +78,7 @@ header {
 				width: 18vw;
 			}
 		}
+
 		&__icon {
 			position: absolute;
 			left: 10px;
@@ -78,6 +90,7 @@ header {
 				z-index: 1;
 			}
 		}
+
 		&__avatar {
 			border-radius: 50%;
 			width: 36px;
@@ -90,18 +103,7 @@ header {
 			}	
 		}
 	}
-	
-	&-upload {
-		width: 100%;
-		position: relative;
-		@include tablet {
-			width: 20vw;
-			order: 1;
-		}
-		@include desktop {
-			width: 13vw;
-		}
-	}
+
 	&-button {
 		display: block;
 		margin-top: 1rem;

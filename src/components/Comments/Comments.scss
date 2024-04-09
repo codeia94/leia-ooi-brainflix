@@ -6,6 +6,9 @@
 .comments {
 	display: flex;
 	flex-direction: column;
+	@include desktop {
+		padding: 0;
+	}
 	&-list {
 		display: flex;
 		border-bottom: 1px solid $mercury;
