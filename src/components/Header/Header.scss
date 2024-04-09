@@ -105,6 +105,10 @@ header {
 	}
 
 	&-button {
+		&:hover {
+			background-color: $darkblue;
+		}
+		cursor: pointer;
 		display: block;
 		margin-top: 1rem;
 		width: 100%;

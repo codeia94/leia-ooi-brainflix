@@ -77,6 +77,9 @@ section {
 			}
 			&-text {
 				height: 80px;
+				&:focus {
+					border: 2px solid $blue;
+				}
 				box-sizing: border-box;
 				max-width: 100%;
 				min-height: 2.5rem;
@@ -95,6 +98,10 @@ section {
 		}
 		&__button {
 			width: 100%;
+			&:hover {
+				background-color: $darkblue;
+			}
+			cursor: pointer;
 			@include btn;
 			background-image: url(../../assets/icons/add_comment.svg);
 			background-repeat: no-repeat;
@@ -111,4 +118,3 @@ section {
 		}
 	}
 }
-

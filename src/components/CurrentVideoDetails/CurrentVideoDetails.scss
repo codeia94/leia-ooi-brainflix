@@ -94,9 +94,11 @@ banner {
 		@include tablet {
 			@include subheader;
 		}
+		@include desktop {
+			margin-bottom: 1.5rem;
+		}
 	}
 }
-
 
 @include tablet {
 	.td-hr {
