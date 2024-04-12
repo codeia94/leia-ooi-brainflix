@@ -10,8 +10,7 @@ import LikeCount from "../../assets/icons/likes.svg";
 
 function CurrentVideoDetails () {
 
-	const apiKey = "efc367f1-b23d-49ad-84f7-aae1e3479d5c";
-	const baseUrl = "https://unit-3-project-api-0a5620414506.herokuapp.com";
+	const baseUrl = "http://localhost:8080";
 	const [details, setDetails] = useState(null);
 	const { videoId } = useParams();
 	const defaultVideoId = "84e96018-4022-434e-80bf-000ce4cd12b8";
@@ -21,7 +20,7 @@ function CurrentVideoDetails () {
 		const fetchVideoData = async () => {
 			console.log(videoId)
 			const id = videoId || defaultVideoId;
-			const response = await axios.get(`${baseUrl}/videos/${id}?api_key=${apiKey}`);
+			const response = await axios.get(`${baseUrl}/videos/${id}`);
 			setDetails(response.data);
 			console.log(response.data);
 		}; 
@@ -51,7 +50,7 @@ function CurrentVideoDetails () {
 			</div>
 			<hr></hr>
 			<div className="info-description">{details.description}</div>
-			<div className="info-comments">{details.comments.length} comments</div>
+			<div className="info-comments">{details.comments ? details.comments.length : 0} comments</div>
 		</div>
 		<Form />
 		<Comment commentsData={details.comments}/>

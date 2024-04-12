@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import "./SideVideos.scss";
 
-function SideVideos({ selectedVideoId, videos }) {
+function SideVideos({ selectedVideoId, videos, onClick }) {
 
 	const filteredVideos = videos.filter((video) => {
 		if (selectedVideoId) {
@@ -12,7 +12,7 @@ function SideVideos({ selectedVideoId, videos }) {
 	});
 
 	return (
-		<aside className="side-videos">
+		<aside className="side-videos" onClick={onClick} >
 			<h2 className="side-videos__title">NEXT VIDEO</h2>
 			<div className="side-videos__container">
 				{filteredVideos.map((video) => {

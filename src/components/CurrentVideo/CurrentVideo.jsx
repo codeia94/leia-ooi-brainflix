@@ -4,8 +4,7 @@ import axios from "axios";
 import React from "react";
 import "./CurrentVideo.scss";
 
-const apiKey = "efc367f1-b23d-49ad-84f7-aae1e3479d5c";
-const baseUrl = "https://unit-3-project-api-0a5620414506.herokuapp.com";
+const baseUrl = "http://localhost:8080";
 
 function CurrentVideo () {
 	const { videoId } = useParams();
@@ -16,7 +15,7 @@ function CurrentVideo () {
 		
 		const fetchVideoData = async () => {
 			const id = videoId || defaultVideoId;
-			const response = await axios.get(`${baseUrl}/videos/${id}?api_key=${apiKey}`);
+			const response = await axios.get(`${baseUrl}/videos/${id}`);
 			setPoster(response.data.image);
 			console.log(response);	
 		};

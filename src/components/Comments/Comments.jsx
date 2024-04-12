@@ -1,7 +1,10 @@
 import "./Comments.scss";
 
-
 function Comments ({commentsData}) {
+
+	if (!commentsData) {
+		return <div>No comments posted yet</div>
+	}
 
 	return (
 		<div className="comments">

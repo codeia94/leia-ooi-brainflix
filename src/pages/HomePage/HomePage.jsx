@@ -6,8 +6,7 @@ import CurrentVideo from "../../components/CurrentVideo/CurrentVideo";
 import CurrentVideoDetails from "../../components/CurrentVideoDetails/CurrentVideoDetails";
 import SideVideos from "../../components/SideVideos/SideVideos";
 
-const apiKey = "efc367f1-b23d-49ad-84f7-aae1e3479d5c";
-const baseUrl = "https://unit-3-project-api-0a5620414506.herokuapp.com";
+const baseUrl = "http://localhost:8080";
 
 function HomePage () {
 	const { videoId } = useParams();
@@ -19,7 +18,7 @@ function HomePage () {
 	// async function to fetch video list
 	useEffect(() => {
 		const fetchVideoList = async () => {
-			const response = await axios.get(`${baseUrl}/videos?api_key=${apiKey}`);
+			const response = await axios.get(`${baseUrl}/videos/`);
 			setVideos(response.data);
 			console.log(response.data);
 		};
@@ -32,7 +31,7 @@ function HomePage () {
     const fetchVideoData = async () => {
         const id = (!videoId && videos.length > 0) ? videos[0].id : videoId;
         if (id) {
-					const response = await axios.get(`${baseUrl}/videos/${id}?api_key=${apiKey}`);
+					const response = await axios.get(`${baseUrl}/videos/${id}`);
 					console.log(response.data);
 					setVideoData(response.data);
         }
@@ -53,7 +52,7 @@ function HomePage () {
 					<CurrentVideoDetails videoData={videoData}/>
 				</div>
 				<div className="main-container__one">
-					<SideVideos selectedVideoId={videoData.id} videos={videos} />
+					<SideVideos selectedVideoId={videoData.id} videos={videos} onClick={() => window.scrollTo({top: 0, behavior: "smooth"})} />
 				</div>	
 			</div>
 		</>

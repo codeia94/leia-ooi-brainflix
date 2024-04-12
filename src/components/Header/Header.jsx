@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import brainflix from "../../assets/logo/BrainFlix-logo.svg";
-import search from "../../assets/icons/search.svg";
 import avatar from "../../assets/images/Mohan-muruge.jpg";
 import "./Header.scss";
 
