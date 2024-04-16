@@ -19,11 +19,17 @@ section {
 	}
 }
 
-textarea {
-	&:focus {
-		border-color: 2px solid $blue;
-	}
-}
+// textarea {
+// 	&:focus {
+// 		border: 2px solid $blue;
+// 	}
+// }
+
+// #comment {
+// 	&:focus {
+// 		border: 2px solid $blue;
+// 	}
+// }
 
 .form {
 	display: flex;
@@ -92,9 +98,9 @@ textarea {
 				border: 1px solid $silver;
 				background-color: $alabaster;
 				color: $darkblack;
-				&:active {
-					border: 2px solid $blue;
-				}
+				// &:focus {
+				// 	border: 2px solid $blue !important;
+				// }
 				@include tablet {
 					height: auto;
 					padding: .5rem;
@@ -123,4 +129,8 @@ textarea {
 			}
 		}
 	}
+}
+
+.form-container .form-container__input-text:focus {
+  border: 2px solid $blue !important;
 }
