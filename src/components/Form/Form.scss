@@ -19,6 +19,12 @@ section {
 	}
 }
 
+textarea {
+	&:focus {
+		border-color: 2px solid $blue;
+	}
+}
+
 .form {
 	display: flex;
 	width: 100%;
