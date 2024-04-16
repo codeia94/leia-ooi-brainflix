@@ -1,4 +1,4 @@
-@use "../../styles/partials/global" as *;
+@use "../../styles/global" as *;
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/mixins" as *;
 @use "../../styles/partials/fontcolors" as *;
@@ -70,6 +70,7 @@
 	flex-direction: column;
 	@include desktop {
 		margin-left: 1.5rem;
+		height: 100%;
 	}
 	&-container {
 		margin-bottom: 1rem;
@@ -79,15 +80,17 @@
 		}
 		@include desktop {
 			padding: 0;
+			margin-bottom: 0;
 		}
 	}
 
 	&-description {
-		height: auto;
+		height: 100%;
 		&__text {
 			height: 6rem;
+			resize: none;
 			@include desktop {
-				height: 8.25rem;
+				height: 8.5rem;
 			}
 		}
 	}
@@ -149,6 +152,7 @@
 			border-radius: 4px;
 			border-width: 0;
 			height: 40px;
+			text-align: center;
 			cursor: pointer;
 			@include tablet {
 				order: 1;

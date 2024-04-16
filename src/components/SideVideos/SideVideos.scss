@@ -1,4 +1,4 @@
-@use "../../styles/partials/global" as *;
+@use "../../styles/global" as *;
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/mixins" as *;
 @use "../../styles/partials/fontcolors" as *;
@@ -46,12 +46,14 @@ aside {
 	}
 	&__link {
 		text-decoration: none;
+		&:visited {
+			color: inherit;
+		}
 	}
 }
 
 .video {
 	&-container {
-		// width: 100;
 		box-sizing: border-box;
 		width: 40%;
 		margin-right: 1rem;

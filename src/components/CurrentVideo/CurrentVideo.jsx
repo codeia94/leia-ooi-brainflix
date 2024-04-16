@@ -17,7 +17,7 @@ function CurrentVideo () {
 			const id = videoId || defaultVideoId;
 			const response = await axios.get(`${baseUrl}/videos/${id}`);
 			setPoster(response.data.image);
-			console.log(response);	
+			// console.log(response);	
 		};
 		fetchVideoData();
 	}, [videoId])

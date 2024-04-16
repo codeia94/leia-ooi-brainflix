@@ -20,7 +20,7 @@ function HomePage () {
 		const fetchVideoList = async () => {
 			const response = await axios.get(`${baseUrl}/videos/`);
 			setVideos(response.data);
-			console.log(response.data);
+			// lconsole.log(response.data);
 		};
 		fetchVideoList();
 	}, []);
@@ -32,7 +32,7 @@ function HomePage () {
         const id = (!videoId && videos.length > 0) ? videos[0].id : videoId;
         if (id) {
 					const response = await axios.get(`${baseUrl}/videos/${id}`);
-					console.log(response.data);
+					// console.log(response.data);
 					setVideoData(response.data);
         }
     };

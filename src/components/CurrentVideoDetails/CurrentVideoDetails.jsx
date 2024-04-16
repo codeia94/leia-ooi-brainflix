@@ -18,11 +18,9 @@ function CurrentVideoDetails () {
 	useEffect(() => {
 
 		const fetchVideoData = async () => {
-			console.log(videoId)
 			const id = videoId || defaultVideoId;
 			const response = await axios.get(`${baseUrl}/videos/${id}`);
 			setDetails(response.data);
-			console.log(response.data);
 		}; 
 		fetchVideoData();
 	}, [videoId]);

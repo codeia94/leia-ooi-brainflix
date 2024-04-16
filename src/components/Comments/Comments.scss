@@ -1,4 +1,4 @@
-@use "../../styles/partials/global" as *;
+@use "../../styles/global" as *;
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/mixins" as *;
 @use "../../styles/partials/fontcolors" as *;
@@ -13,6 +13,7 @@
 		display: flex;
 		border-bottom: 1px solid $mercury;
 		padding-bottom: 1rem;
+		width: 100%;
 	}
 	&-img {
 		background-color: $mercury;
@@ -28,6 +29,9 @@
 	}
 	&-container {
 		padding-left:  1rem;
+		@include tablet {
+			width: 100%;
+		}
 
 		&__comment {
 			@include m-body-copy;
@@ -41,6 +45,10 @@
 		&__details {
 			display: flex;
 			justify-content: space-between;
+			@include tablet {
+				width: 100%;
+				justify-content: space-between;
+			}
 			@include desktop {
 				padding-right: 1rem;
 			}
@@ -55,6 +63,7 @@
 				@include m-body-copy;
 				@include tablet {
 					@include body-copy;
+					
 				}
 			}
 		}
